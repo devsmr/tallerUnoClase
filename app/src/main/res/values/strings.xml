@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">ManillApp</string>
+    <string name="cuero">Cuero</string>
+    <string name="cuerda">Cuerda</string>
+    <string name="martillo">martllo</string>
+    <string name="ancla">ancla</string>
+    <string name="oro">Oro</string>
+    <string name="oroRosado">OroRosado</string>
+    <string name="plata">Plata</string>
+    <string name="niquel">Niquel</string>
+    <string name="dolar">Dolar</string>
+    <string name="pesos">Pesos</string>
+
+
+    <string-array name="material">
+        <item>@string/cuero</item>
+        <item>@string/cuerda</item>
+    </string-array>
+
+    <string-array name="dije">
+        <item>@string/martillo</item>
+        <item>@string/ancla </item>
+    </string-array>
+
+    <string-array name="tipoManilla">
+        <item>@string/oro</item>
+        <item>@string/oroRosado</item>
+        <item>@string/plata</item>
+        <item>@string/niquel</item>
+    </string-array>
+
+    <string-array name="tipoMoneda">
+        <item>@string/pesos</item>
+        <item>@string/dolar</item>
+    </string-array>
 </resources>
