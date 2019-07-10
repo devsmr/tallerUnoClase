@@ -37,14 +37,12 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<String> adapter4 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,opcTipoMoneda);
         ArrayAdapter<String> adapter5 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,opcCantidad);
 
-
-
         //pasamos el adapter al adapter
         spMateriales.setAdapter(adapter);
-        spMateriales.setAdapter(adapter2);
-        spMateriales.setAdapter(adapter3);
-        spMateriales.setAdapter(adapter4);
-        spMateriales.setAdapter(adapter5);
+        spDije.setAdapter(adapter2);
+        spTipoDije.setAdapter(adapter3);
+        spTipoMoneda.setAdapter(adapter4);
+        spCantidad.setAdapter(adapter5);
 
     }
 }
