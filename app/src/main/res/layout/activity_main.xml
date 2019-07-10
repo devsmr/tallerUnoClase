@@ -20,7 +20,8 @@
                 android:id="@+id/material"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:entries="@array/material" />
         </LinearLayout>
 
         <LinearLayout
@@ -32,7 +33,8 @@
                 android:id="@+id/dije"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:entries="@array/dije" />
         </LinearLayout>
 
         <LinearLayout
@@ -44,7 +46,8 @@
                 android:id="@+id/tipoDije"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:entries="@array/tipoDije" />
         </LinearLayout>
 
         <LinearLayout
@@ -56,7 +59,8 @@
                 android:id="@+id/tipoMoneda"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:entries="@array/tipoMoneda" />
         </LinearLayout>
 
         <LinearLayout
@@ -68,7 +72,8 @@
                 android:id="@+id/cantidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:entries="@array/cantidadManilla" />
         </LinearLayout>
 
         <View

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ManillApp</string>
+    <string name="cuero">Leather</string>
+    <string name="cuerda">Rope</string>
+    <string name="martillo">Hammer</string>
+    <string name="ancla">Anchor</string>
+    <string name="oro">Gold</string>
+    <string name="niquel">Nickel</string>
+    <string name="oroRosado">Pink gold</string>
+    <string name="plata">Silver</string>
+    <string name="dolar">Dollar</string>
+    <string name="pesos">Pesos</string>
+    <string name="uno">One</string>
+    <string name="dos">Two</string>
+    <string name="tres">Three</string>
+    <string name="cuatro">Four</string>
+    <string name="cinco">Five</string>
+    <string name="seis">Six</string>
+    <string name="siete">Seven</string>
+    <string name="ocho">Eight</string>
+    <string name="nueve">Nine</string>
+    <string name="diez">Ten</string>
+</resources>

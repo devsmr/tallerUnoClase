@@ -2,14 +2,26 @@
     <string name="app_name">ManillApp</string>
     <string name="cuero">Cuero</string>
     <string name="cuerda">Cuerda</string>
-    <string name="martillo">martllo</string>
-    <string name="ancla">ancla</string>
+    <string name="martillo">Martillo</string>
+    <string name="ancla">Ancla</string>
     <string name="oro">Oro</string>
     <string name="oroRosado">OroRosado</string>
     <string name="plata">Plata</string>
     <string name="niquel">Niquel</string>
     <string name="dolar">Dolar</string>
     <string name="pesos">Pesos</string>
+
+
+    <string name="uno">Uno</string>
+    <string name="dos">Dos</string>
+    <string name="tres">Tres</string>
+    <string name="cuatro">Cuatro</string>
+    <string name="cinco">Cinco</string>
+    <string name="seis">Seis</string>
+    <string name="siete">Siete</string>
+    <string name="ocho">Ocho</string>
+    <string name="nueve">Nueve</string>
+    <string name="diez">Diez</string>
 
 
     <string-array name="material">
@@ -22,7 +34,7 @@
         <item>@string/ancla </item>
     </string-array>
 
-    <string-array name="tipoManilla">
+    <string-array name="tipoDije">
         <item>@string/oro</item>
         <item>@string/oroRosado</item>
         <item>@string/plata</item>
@@ -32,5 +44,18 @@
     <string-array name="tipoMoneda">
         <item>@string/pesos</item>
         <item>@string/dolar</item>
+    </string-array>
+
+    <string-array name="cantidadManilla">
+        <item>@string/uno</item>
+        <item>@string/dos</item>
+        <item>@string/tres</item>
+        <item>@string/cuatro</item>
+        <item>@string/cinco</item>
+        <item>@string/seis</item>
+        <item>@string/siete</item>
+        <item>@string/ocho</item>
+        <item>@string/nueve</item>
+        <item>@string/diez</item>
     </string-array>
 </resources>
