@@ -7,8 +7,8 @@ import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
-    String opcMateriales[],opcDije[],opcTipoDije[],opcTipoMoneda[],opcCantidad[];
-    Spinner spMateriales,spDije,spTipoDije,spTipoMoneda,spCantidad;
+    String opcMateriales[],opcDije[],opcTipoDije[],opcTipoMoneda[];
+    Spinner spMateriales,spDije,spTipoDije,spTipoMoneda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         spDije = findViewById((R.id.dije));
         spTipoDije = findViewById(R.id.tipoDije);
         spTipoMoneda = findViewById(R.id.tipoMoneda);
-        spCantidad = findViewById(R.id.cantidad);
 
 
         //Traemos las opciones de un array Strings (valores del spinner)
@@ -28,21 +27,20 @@ public class MainActivity extends AppCompatActivity {
         opcDije = getResources().getStringArray(R.array.dije);
         opcTipoDije = getResources().getStringArray(R.array.tipoDije);
         opcTipoMoneda = getResources().getStringArray(R.array.tipoMoneda);
-        opcCantidad = getResources().getStringArray(R.array.cantidadManilla);
+
 
         //Creamos el Adapter indicando, donde se va a colocar, como se va a visualizar y que se va a mostrar.
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,opcMateriales);
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,opcDije);
-        ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,opcTipoDije);
-        ArrayAdapter<String> adapter4 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,opcTipoMoneda);
-        ArrayAdapter<String> adapter5 = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item,opcCantidad);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,R.layout.spinner_item_lista,opcMateriales);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this,R.layout.spinner_item_lista,opcDije);
+        ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this,R.layout.spinner_item_lista,opcTipoDije);
+        ArrayAdapter<String> adapter4 = new ArrayAdapter<>(this,R.layout.spinner_item_lista,opcTipoMoneda);
 
         //pasamos el adapter al adapter
         spMateriales.setAdapter(adapter);
         spDije.setAdapter(adapter2);
         spTipoDije.setAdapter(adapter3);
         spTipoMoneda.setAdapter(adapter4);
-        spCantidad.setAdapter(adapter5);
+
 
     }
 }

@@ -12,18 +12,6 @@
     <string name="pesos">Pesos</string>
 
 
-    <string name="uno">Uno</string>
-    <string name="dos">Dos</string>
-    <string name="tres">Tres</string>
-    <string name="cuatro">Cuatro</string>
-    <string name="cinco">Cinco</string>
-    <string name="seis">Seis</string>
-    <string name="siete">Siete</string>
-    <string name="ocho">Ocho</string>
-    <string name="nueve">Nueve</string>
-    <string name="diez">Diez</string>
-
-
     <string-array name="material">
         <item>@string/cuero</item>
         <item>@string/cuerda</item>
@@ -46,16 +34,5 @@
         <item>@string/dolar</item>
     </string-array>
 
-    <string-array name="cantidadManilla">
-        <item>@string/uno</item>
-        <item>@string/dos</item>
-        <item>@string/tres</item>
-        <item>@string/cuatro</item>
-        <item>@string/cinco</item>
-        <item>@string/seis</item>
-        <item>@string/siete</item>
-        <item>@string/ocho</item>
-        <item>@string/nueve</item>
-        <item>@string/diez</item>
-    </string-array>
+
 </resources>
