@@ -74,55 +74,10 @@ public class MainActivity extends AppCompatActivity {
 
             // 0 = pesos colombiandos
             // 1 = dolares
+
+            //validar en pesos
+
             case 0:
-                if(((caseMateriales == 0)&& (caseDije == 0)) &&
-                        (caseTipoDije == 0 || caseTipoDije == 1)){
-                            resultConsulta = caseCantidad * 100;
-                            break;
-
-                }else if(((caseMateriales == 0)&& (caseDije == 0)) && (caseTipoDije == 2)){
-                            resultConsulta = caseCantidad * 80;
-                            break;
-                }else if(((caseMateriales == 0)&& (caseDije == 0)) && (caseTipoDije == 3)){
-                       resultConsulta = caseCantidad * 70;
-                       break;
-                }else if(((caseMateriales == 0)&& (caseDije == 1)) &&
-                        (caseTipoDije == 0 || caseTipoDije == 1)){
-                         resultConsulta = caseCantidad * 120;
-                    break;
-                }else if(((caseMateriales == 0)&& (caseDije == 1)) && (caseTipoDije == 2)){
-                    resultConsulta = caseCantidad * 100;
-                    break;
-                }else if(((caseMateriales == 0)&& (caseDije == 1)) && (caseTipoDije == 3)){
-                    resultConsulta = caseCantidad * 90;
-                    break;
-                }//
-                 else if(((caseMateriales == 1)&& (caseDije == 0)) &&
-                        (caseTipoDije == 0 || caseTipoDije == 1)){
-                    resultConsulta = caseCantidad * 90;
-                    break;
-
-                }else if(((caseMateriales == 1)&& (caseDije == 0)) && (caseTipoDije == 2)){
-                    resultConsulta = caseCantidad * 70;
-                    break;
-                }else if(((caseMateriales == 1)&& (caseDije == 0)) && (caseTipoDije == 3)){
-                    resultConsulta = caseCantidad * 50;
-                    break;
-                }else if(((caseMateriales == 1)&& (caseDije == 1)) &&
-                        (caseTipoDije == 0 || caseTipoDije == 1)){
-                    resultConsulta = caseCantidad * 110;
-                    break;
-                }else if(((caseMateriales == 1)&& (caseDije == 1)) && (caseTipoDije == 2)){
-                    resultConsulta = caseCantidad * 90;
-                    break;
-                }else if(((caseMateriales == 1)&& (caseDije == 1)) && (caseTipoDije == 3)){
-                    resultConsulta = caseCantidad * 80;
-                    break;
-                }
-                //
-
-
-            case 1:
                 if(((caseMateriales == 0)&& (caseDije == 0)) &&
                         (caseTipoDije == 0 || caseTipoDije == 1)){
                     resultConsulta = (caseCantidad * 100) * dolar;
@@ -171,12 +126,70 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+                //validar en dolares
+            case 1:
+                if(((caseMateriales == 0)&& (caseDije == 0)) &&
+                        (caseTipoDije == 0 || caseTipoDije == 1)){
+                            resultConsulta = caseCantidad * 100;
+                            break;
+
+                }else if(((caseMateriales == 0)&& (caseDije == 0)) && (caseTipoDije == 2)){
+                            resultConsulta = caseCantidad * 80;
+                            break;
+                }else if(((caseMateriales == 0)&& (caseDije == 0)) && (caseTipoDije == 3)){
+                       resultConsulta = caseCantidad * 70;
+                       break;
+                }else if(((caseMateriales == 0)&& (caseDije == 1)) &&
+                        (caseTipoDije == 0 || caseTipoDije == 1)){
+                         resultConsulta = caseCantidad * 120;
+                    break;
+                }else if(((caseMateriales == 0)&& (caseDije == 1)) && (caseTipoDije == 2)){
+                    resultConsulta = caseCantidad * 100;
+                    break;
+                }else if(((caseMateriales == 0)&& (caseDije == 1)) && (caseTipoDije == 3)){
+                    resultConsulta = caseCantidad * 90;
+                    break;
+                }//
+                 else if(((caseMateriales == 1)&& (caseDije == 0)) &&
+                        (caseTipoDije == 0 || caseTipoDije == 1)){
+                    resultConsulta = caseCantidad * 90;
+                    break;
+
+                }else if(((caseMateriales == 1)&& (caseDije == 0)) && (caseTipoDije == 2)){
+                    resultConsulta = caseCantidad * 70;
+                    break;
+                }else if(((caseMateriales == 1)&& (caseDije == 0)) && (caseTipoDije == 3)){
+                    resultConsulta = caseCantidad * 50;
+                    break;
+                }else if(((caseMateriales == 1)&& (caseDije == 1)) &&
+                        (caseTipoDije == 0 || caseTipoDije == 1)){
+                    resultConsulta = caseCantidad * 110;
+                    break;
+                }else if(((caseMateriales == 1)&& (caseDije == 1)) && (caseTipoDije == 2)){
+                    resultConsulta = caseCantidad * 90;
+                    break;
+                }else if(((caseMateriales == 1)&& (caseDije == 1)) && (caseTipoDije == 3)){
+                    resultConsulta = caseCantidad * 80;
+                    break;
+                }
+                //
+
+
+
+
         }
-        resultado.setText("" + resultConsulta);
+        resultado.setText("El valor de la manilla consultada es:" + resultConsulta);
 
     }
 
     public void cancelar (View v){
         spMateriales.setSelection(0);
+        spDije.setSelection(0);
+        spTipoDije.setSelection(0);
+        spTipoMoneda.setSelection(0);
+        cantidadIngresada.setText("");
+        resultado.setText("");
     }
 }
