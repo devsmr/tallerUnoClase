@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,132 +57,130 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void consultar (View v){
-        int resultConsulta = 0;
-        int dolar = 3200;
-        int opcMoneda,caseMateriales,caseDije,caseTipoDije,caseCantidad;
+    public void consultar (View v) {
+
+            int resultConsulta = 0;
+            int dolar = 3200;
+            int opcMoneda, caseMateriales, caseDije, caseTipoDije, caseCantidad;
+
+        if(cantidadIngresada.getText().toString().isEmpty()){
+
+            Toast.makeText(this,"FAVOR INGRESAR LA CANTIDAD A CONSULTAR",Toast.LENGTH_LONG).show();
+        }else{
+
+            //Guardar las posiciones que tienen los spinners
+            opcMoneda = spTipoMoneda.getSelectedItemPosition();
+            caseMateriales = spMateriales.getSelectedItemPosition();
+            caseDije = spDije.getSelectedItemPosition();
+            caseTipoDije = spTipoDije.getSelectedItemPosition();
+            caseCantidad = Integer.parseInt(cantidadIngresada.getText().toString());
 
 
-       //Guardar las posiciones que tienen los spinners
-        opcMoneda = spTipoMoneda.getSelectedItemPosition();
-        caseMateriales =spMateriales.getSelectedItemPosition();
-        caseDije = spDije.getSelectedItemPosition();
-        caseTipoDije = spTipoDije.getSelectedItemPosition();
-        caseCantidad = Integer.parseInt(cantidadIngresada.getText().toString());
+            switch (opcMoneda) {
+
+                // 0 = pesos colombiandos
+                // 1 = dolares
+
+                //validar en pesos
+
+                case 0:
+                    if (((caseMateriales == 0) && (caseDije == 0)) &&
+                            (caseTipoDije == 0 || caseTipoDije == 1)) {
+                        resultConsulta = (caseCantidad * 100) * dolar;
+                        break;
+
+                    } else if (((caseMateriales == 0) && (caseDije == 0)) && (caseTipoDije == 2)) {
+                        resultConsulta = (caseCantidad * 80) * dolar;
+                        break;
+                    } else if (((caseMateriales == 0) && (caseDije == 0)) && (caseTipoDije == 3)) {
+                        resultConsulta = (caseCantidad * 70) * dolar;
+                        break;
+                    } else if (((caseMateriales == 0) && (caseDije == 1)) &&
+                            (caseTipoDije == 0 || caseTipoDije == 1)) {
+                        resultConsulta = (caseCantidad * 120) * dolar;
+                        break;
+                    } else if (((caseMateriales == 0) && (caseDije == 1)) && (caseTipoDije == 2)) {
+                        resultConsulta = (caseCantidad * 100) * dolar;
+                        break;
+                    } else if (((caseMateriales == 0) && (caseDije == 1)) && (caseTipoDije == 3)) {
+                        resultConsulta = (caseCantidad * 90) * dolar;
+                        break;
+                    }//
+                    else if (((caseMateriales == 1) && (caseDije == 0)) &&
+                            (caseTipoDije == 0 || caseTipoDije == 1)) {
+                        resultConsulta = (caseCantidad * 90) * dolar;
+                        break;
+
+                    } else if (((caseMateriales == 1) && (caseDije == 0)) && (caseTipoDije == 2)) {
+                        resultConsulta = (caseCantidad * 70) * dolar;
+                        break;
+                    } else if (((caseMateriales == 1) && (caseDije == 0)) && (caseTipoDije == 3)) {
+                        resultConsulta = (caseCantidad * 50) * dolar;
+                        break;
+                    } else if (((caseMateriales == 1) && (caseDije == 1)) &&
+                            (caseTipoDije == 0 || caseTipoDije == 1)) {
+                        resultConsulta = (caseCantidad * 110) * dolar;
+                        break;
+                    } else if (((caseMateriales == 1) && (caseDije == 1)) && (caseTipoDije == 2)) {
+                        resultConsulta = (caseCantidad * 90) * dolar;
+                        break;
+                    } else if (((caseMateriales == 1) && (caseDije == 1)) && (caseTipoDije == 3)) {
+                        resultConsulta = (caseCantidad * 80) * dolar;
+                        break;
+                    }
+                    //
 
 
-        switch (opcMoneda){
+                    //validar en dolares
+                case 1:
+                    if (((caseMateriales == 0) && (caseDije == 0)) &&
+                            (caseTipoDije == 0 || caseTipoDije == 1)) {
+                        resultConsulta = caseCantidad * 100;
+                        break;
 
-            // 0 = pesos colombiandos
-            // 1 = dolares
+                    } else if (((caseMateriales == 0) && (caseDije == 0)) && (caseTipoDije == 2)) {
+                        resultConsulta = caseCantidad * 80;
+                        break;
+                    } else if (((caseMateriales == 0) && (caseDije == 0)) && (caseTipoDije == 3)) {
+                        resultConsulta = caseCantidad * 70;
+                        break;
+                    } else if (((caseMateriales == 0) && (caseDije == 1)) &&
+                            (caseTipoDije == 0 || caseTipoDije == 1)) {
+                        resultConsulta = caseCantidad * 120;
+                        break;
+                    } else if (((caseMateriales == 0) && (caseDije == 1)) && (caseTipoDije == 2)) {
+                        resultConsulta = caseCantidad * 100;
+                        break;
+                    } else if (((caseMateriales == 0) && (caseDije == 1)) && (caseTipoDije == 3)) {
+                        resultConsulta = caseCantidad * 90;
+                        break;
+                    }//
+                    else if (((caseMateriales == 1) && (caseDije == 0)) &&
+                            (caseTipoDije == 0 || caseTipoDije == 1)) {
+                        resultConsulta = caseCantidad * 90;
+                        break;
 
-            //validar en pesos
-
-            case 0:
-                if(((caseMateriales == 0)&& (caseDije == 0)) &&
-                        (caseTipoDije == 0 || caseTipoDije == 1)){
-                    resultConsulta = (caseCantidad * 100) * dolar;
-                    break;
-
-                }else if(((caseMateriales == 0)&& (caseDije == 0)) && (caseTipoDije == 2)){
-                    resultConsulta = (caseCantidad * 80)  * dolar;
-                    break;
-                }else if(((caseMateriales == 0)&& (caseDije == 0)) && (caseTipoDije == 3)){
-                    resultConsulta = (caseCantidad * 70)  * dolar;
-                    break;
-                }else if(((caseMateriales == 0)&& (caseDije == 1)) &&
-                        (caseTipoDije == 0 || caseTipoDije == 1)){
-                    resultConsulta = (caseCantidad * 120 )  * dolar;
-                    break;
-                }else if(((caseMateriales == 0)&& (caseDije == 1)) && (caseTipoDije == 2)){
-                    resultConsulta = (caseCantidad * 100)  * dolar;
-                    break;
-                }else if(((caseMateriales == 0)&& (caseDije == 1)) && (caseTipoDije == 3)){
-                    resultConsulta = (caseCantidad * 90)  * dolar;
-                    break;
-                }//
-                else if(((caseMateriales == 1)&& (caseDije == 0)) &&
-                        (caseTipoDije == 0 || caseTipoDije == 1)){
-                    resultConsulta = (caseCantidad * 90)  * dolar;
-                    break;
-
-                }else if(((caseMateriales == 1)&& (caseDije == 0)) && (caseTipoDije == 2)){
-                    resultConsulta = (caseCantidad * 70)  * dolar;
-                    break;
-                }else if(((caseMateriales == 1)&& (caseDije == 0)) && (caseTipoDije == 3)){
-                    resultConsulta = (caseCantidad * 50)  * dolar;
-                    break;
-                }else if(((caseMateriales == 1)&& (caseDije == 1)) &&
-                        (caseTipoDije == 0 || caseTipoDije == 1)){
-                    resultConsulta = (caseCantidad * 110)  * dolar;
-                    break;
-                }else if(((caseMateriales == 1)&& (caseDije == 1)) && (caseTipoDije == 2)){
-                    resultConsulta = (caseCantidad * 90)  * dolar;
-                    break;
-                }else if(((caseMateriales == 1)&& (caseDije == 1)) && (caseTipoDije == 3)){
-                    resultConsulta = (caseCantidad * 80)  * dolar;
-                    break;
-                }
-                //
-
-
-
-
-
-                //validar en dolares
-            case 1:
-                if(((caseMateriales == 0)&& (caseDije == 0)) &&
-                        (caseTipoDije == 0 || caseTipoDije == 1)){
-                            resultConsulta = caseCantidad * 100;
-                            break;
-
-                }else if(((caseMateriales == 0)&& (caseDije == 0)) && (caseTipoDije == 2)){
-                            resultConsulta = caseCantidad * 80;
-                            break;
-                }else if(((caseMateriales == 0)&& (caseDije == 0)) && (caseTipoDije == 3)){
-                       resultConsulta = caseCantidad * 70;
-                       break;
-                }else if(((caseMateriales == 0)&& (caseDije == 1)) &&
-                        (caseTipoDije == 0 || caseTipoDije == 1)){
-                         resultConsulta = caseCantidad * 120;
-                    break;
-                }else if(((caseMateriales == 0)&& (caseDije == 1)) && (caseTipoDije == 2)){
-                    resultConsulta = caseCantidad * 100;
-                    break;
-                }else if(((caseMateriales == 0)&& (caseDije == 1)) && (caseTipoDije == 3)){
-                    resultConsulta = caseCantidad * 90;
-                    break;
-                }//
-                 else if(((caseMateriales == 1)&& (caseDije == 0)) &&
-                        (caseTipoDije == 0 || caseTipoDije == 1)){
-                    resultConsulta = caseCantidad * 90;
-                    break;
-
-                }else if(((caseMateriales == 1)&& (caseDije == 0)) && (caseTipoDije == 2)){
-                    resultConsulta = caseCantidad * 70;
-                    break;
-                }else if(((caseMateriales == 1)&& (caseDije == 0)) && (caseTipoDije == 3)){
-                    resultConsulta = caseCantidad * 50;
-                    break;
-                }else if(((caseMateriales == 1)&& (caseDije == 1)) &&
-                        (caseTipoDije == 0 || caseTipoDije == 1)){
-                    resultConsulta = caseCantidad * 110;
-                    break;
-                }else if(((caseMateriales == 1)&& (caseDije == 1)) && (caseTipoDije == 2)){
-                    resultConsulta = caseCantidad * 90;
-                    break;
-                }else if(((caseMateriales == 1)&& (caseDije == 1)) && (caseTipoDije == 3)){
-                    resultConsulta = caseCantidad * 80;
-                    break;
-                }
-                //
-
-
-
-
+                    } else if (((caseMateriales == 1) && (caseDije == 0)) && (caseTipoDije == 2)) {
+                        resultConsulta = caseCantidad * 70;
+                        break;
+                    } else if (((caseMateriales == 1) && (caseDije == 0)) && (caseTipoDije == 3)) {
+                        resultConsulta = caseCantidad * 50;
+                        break;
+                    } else if (((caseMateriales == 1) && (caseDije == 1)) &&
+                            (caseTipoDije == 0 || caseTipoDije == 1)) {
+                        resultConsulta = caseCantidad * 110;
+                        break;
+                    } else if (((caseMateriales == 1) && (caseDije == 1)) && (caseTipoDije == 2)) {
+                        resultConsulta = caseCantidad * 90;
+                        break;
+                    } else if (((caseMateriales == 1) && (caseDije == 1)) && (caseTipoDije == 3)) {
+                        resultConsulta = caseCantidad * 80;
+                        break;
+                    }
+                    //
+            }
+            resultado.setText("El valor de la manilla consultada es:" + resultConsulta);
         }
-        resultado.setText("El valor de la manilla consultada es:" + resultConsulta);
-
     }
 
     public void cancelar (View v){
@@ -192,4 +191,14 @@ public class MainActivity extends AppCompatActivity {
         cantidadIngresada.setText("");
         resultado.setText("");
     }
+
+   /* public boolean validar(){
+
+        if(cantidadIngresada.getText().toString().isEmpty()){
+                cantidadIngresada.setError("Favor ingresar la cantidad");
+                cantidadIngresada.requestFocus();
+            return false;
+        }
+        return false;
+    }*/
 }
