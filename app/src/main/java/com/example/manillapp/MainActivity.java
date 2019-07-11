@@ -3,9 +3,14 @@ package com.example.manillapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView resultado;
+    EditText cantidadIngresada;
 
     String opcMateriales[],opcDije[],opcTipoDije[],opcTipoMoneda[];
     Spinner spMateriales,spDije,spTipoDije,spTipoMoneda;
@@ -16,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Captura de los objetos utilizados del spinner
+        cantidadIngresada = findViewById(R.id.cantidad);
         spMateriales = findViewById((R.id.material));
         spDije = findViewById((R.id.dije));
         spTipoDije = findViewById(R.id.tipoDije);
@@ -25,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         //Traemos las opciones de un array Strings (valores del spinner)
         opcMateriales = getResources().getStringArray(R.array.material);
         opcDije = getResources().getStringArray(R.array.dije);
-        opcTipoDije = getResources().getStringArray(R.array.tipoDije);
+        opcTipoDije = getResources().getStringArray(R.array.tipoManilla);
         opcTipoMoneda = getResources().getStringArray(R.array.tipoMoneda);
 
 
