@@ -11,14 +11,13 @@
     <string name="plata">Silver</string>
     <string name="dolar">Dollar</string>
     <string name="pesos">Pesos</string>
-    <string name="uno">One</string>
-    <string name="dos">Two</string>
-    <string name="tres">Three</string>
-    <string name="cuatro">Four</string>
-    <string name="cinco">Five</string>
-    <string name="seis">Six</string>
-    <string name="siete">Seven</string>
-    <string name="ocho">Eight</string>
-    <string name="nueve">Nine</string>
-    <string name="diez">Ten</string>
+    <string name="consultar">Consult</string>
+    <string name="cancelar">Cancel</string>
+    <string name="textMaterial">Material</string>
+    <string name="txtMoneda">Currency</string>
+    <string name="txtCantidad">Quantity</string>
+    <string name="txtDije">Pendant</string>
+    <string name="txtTipoDije">Type Pendant</string>
+    <string name="msjResultado">Please enter the Quantity</string>
+
 </resources>

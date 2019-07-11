@@ -63,10 +63,11 @@ public class MainActivity extends AppCompatActivity {
             int dolar = 3200;
             int opcMoneda, caseMateriales, caseDije, caseTipoDije, caseCantidad;
 
-        if(cantidadIngresada.getText().toString().isEmpty()){
+       /* if(cantidadIngresada.getText().toString().isEmpty()){
 
             Toast.makeText(this,"FAVOR INGRESAR LA CANTIDAD A CONSULTAR",Toast.LENGTH_LONG).show();
-        }else{
+        }else*/
+       if(validar()){
 
             //Guardar las posiciones que tienen los spinners
             opcMoneda = spTipoMoneda.getSelectedItemPosition();
@@ -179,7 +180,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                     //
             }
-            resultado.setText("El valor de la manilla consultada es:" + resultConsulta);
+            //resultado.setText("El valor de la manilla consultada es:" + resultConsulta);
+           resultado.setText(getResources().getString(R.string.msjResultado)+ " " + resultConsulta);
         }
     }
 
@@ -192,13 +194,13 @@ public class MainActivity extends AppCompatActivity {
         resultado.setText("");
     }
 
-   /* public boolean validar(){
+    public boolean validar(){
 
         if(cantidadIngresada.getText().toString().isEmpty()){
                 cantidadIngresada.setError("Favor ingresar la cantidad");
                 cantidadIngresada.requestFocus();
             return false;
         }
-        return false;
-    }*/
+        return true;
+    }
 }
