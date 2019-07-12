@@ -42,7 +42,10 @@
     <string name="txtMoneda">Moneda</string>
     <string name="txtCantidad">Cantidad</string>
 
-    <string name="msjResultado">Favor ingresar la cantidad</string>
+    <string name="msjTxtResultadoPesos">El valor en Pesos(COP) de su manilla es de </string>
+    <string name="msjTxtResultadoDollar">El valor en Dollar (USD)de su manilla es de </string>
+    <string name="msjCantidad">Favor ingresar la cantidad de manillas</string>
+
 
 
 </resources>

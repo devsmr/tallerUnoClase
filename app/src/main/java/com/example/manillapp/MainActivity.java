@@ -63,10 +63,7 @@ public class MainActivity extends AppCompatActivity {
             int dolar = 3200;
             int opcMoneda, caseMateriales, caseDije, caseTipoDije, caseCantidad;
 
-       /* if(cantidadIngresada.getText().toString().isEmpty()){
 
-            Toast.makeText(this,"FAVOR INGRESAR LA CANTIDAD A CONSULTAR",Toast.LENGTH_LONG).show();
-        }else*/
        if(validar()){
 
             //Guardar las posiciones que tienen los spinners
@@ -79,8 +76,9 @@ public class MainActivity extends AppCompatActivity {
 
             switch (opcMoneda) {
 
-                // 0 = pesos colombiandos
                 // 1 = dolares
+                // 0 = pesos colombiandos
+
 
                 //validar en pesos
 
@@ -180,8 +178,12 @@ public class MainActivity extends AppCompatActivity {
                     }
                     //
             }
-            //resultado.setText("El valor de la manilla consultada es:" + resultConsulta);
-           resultado.setText(getResources().getString(R.string.msjResultado)+ " " + resultConsulta);
+
+          if(opcMoneda == 0) {
+              resultado.setText(getResources().getString(R.string.msjTxtResultadoPesos) + " " + resultConsulta);
+          }else{
+              resultado.setText(getResources().getString(R.string.msjTxtResultadoDollar) + " " + resultConsulta);
+          }
         }
     }
 
@@ -197,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean validar(){
 
         if(cantidadIngresada.getText().toString().isEmpty()){
-                cantidadIngresada.setError("Favor ingresar la cantidad");
+                cantidadIngresada.setError(getResources().getString(R.string.msjCantidad));
                 cantidadIngresada.requestFocus();
             return false;
         }

@@ -18,6 +18,9 @@
     <string name="txtCantidad">Quantity</string>
     <string name="txtDije">Pendant</string>
     <string name="txtTipoDije">Type Pendant</string>
-    <string name="msjResultado">Please enter the Quantity</string>
+    <string name="msjTxtResultadoPesos">The value in pesos (COP) of your handle is</string>
+    <string name="msjCantidad">Please enter the number of handles</string>
+    <string name="msjTxtResultadoDollar">" The value in Dollar (USD) of your handle is"</string>
+
 
 </resources>
